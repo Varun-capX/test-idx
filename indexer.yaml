@@ -16,6 +16,6 @@ eventHandlers:
     handler: handlePubkeyEvent
   - event: U8Event(id u64,data u8,label indexed string)
     handler: handleU8Event
-pollingInterval: 10000
+pollingInterval: 10
 programId: 9XRQ3Wwv1Bawt1WPbp8yX8k4r6eM2ZZQyukFxJxAFtsq
 startSlot: 168891968
