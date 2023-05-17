@@ -15,17 +15,36 @@ export async function handleU64Event(params : U64Event) {
 		entity.PrimaryEntity = (params.data).toString();
 	}
 	entity.NonPrimaryEntity = (params.label);
+	entity.save();
 }
 
 export async function handleStringEvent(params : StringEvent) {
-	//TODO: Implement
+	let entity = new SampleEntity();
+	entity.load((params.data).toString());
+	if (entity.PrimaryEntity == undefined) {
+		entity.PrimaryEntity = (params.data).toString();
+	}
+	entity.NonPrimaryEntity = (params.label);
+	entity.save();
 }
 
 export async function handlePubkeyEvent(params : PubkeyEvent) {
-	//TODO: Implement
+	let entity = new SampleEntity();
+	entity.load((params.data).toString());
+	if (entity.PrimaryEntity == undefined) {
+		entity.PrimaryEntity = (params.data).toString();
+	}
+	entity.NonPrimaryEntity = (params.label);
+	entity.save();
 }
 
 export async function handleU8Event(params : U8Event) {
-	//TODO: Implement
+	let entity = new SampleEntity();
+	entity.load((params.data).toString());
+	if (entity.PrimaryEntity == undefined) {
+		entity.PrimaryEntity = (params.data).toString();
+	}
+	entity.NonPrimaryEntity = (params.label);
+	entity.save();
 }
 
