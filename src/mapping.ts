@@ -10,10 +10,11 @@ import { BN } from '@project-serum/anchor';
 import { PublicKey } from '@solana/web3.js';
 export async function handleU64Event(params : U64Event) {
 	let entity = new SampleEntity();
-	entity.load(params["primKey"]);
+	entity.load((params.data).toString());
 	if (entity.PrimaryEntity == undefined) {
-		// checking if the load failed to find anything
+		entity.PrimaryEntity = (params.data).toString();
 	}
+	entity.NonPrimaryEntity = (params.label);
 }
 
 export async function handleStringEvent(params : StringEvent) {
